@@ -12,7 +12,7 @@ class SelectBoxContainer extends React.Component {
     }
 
     render () {
-        return (<SelectBox options={this.props.options} handleChange={this.handleChange}/>);
+        return (<SelectBox options={this.props.options} handleChange={this.handleChange} type={this.props.type}/>);
     }
 
     handleChange (evt) {

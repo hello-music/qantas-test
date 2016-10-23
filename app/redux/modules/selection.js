@@ -27,6 +27,7 @@ export default function selection (state = initialState, action) {
         case SELECT_MAKE:
             return state.merge({
                 makeId: action.makeId,
+                modelId: ''
             });
         case SELECT_MODEL:
             return state.merge({
