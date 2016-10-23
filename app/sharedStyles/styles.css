@@ -4,7 +4,8 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
-    color: #5F5F5F;
+    color: darkgrey;
+    background-color: black;
 }
 
 .fullWidth {

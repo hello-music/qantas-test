@@ -1,6 +1,26 @@
-import React  from 'react';
+import React, { PropTypes }  from 'react';
+import { connect } from 'react-redux';
 import { HomePage } from 'components';
+import { Map } from 'immutable';
 
-const HomePageContainer = () => (<HomePage />);
+const HomePageContainer = props => (<HomePage review={props.review} model={props.model}/>);
 
-export default HomePageContainer;
+HomePageContainer.propTypes = {
+    // connected props
+    review: PropTypes.string.isRequired,
+    model: PropTypes.instanceOf(Map).isRequired,
+};
+
+HomePageContainer.defaultProps = {
+    review: '',
+    model: Map({})
+};
+
+function mapStateToProps ({ carOfTheWeek, models }) {
+    return {
+        review: carOfTheWeek.get('review'),
+        model: models.find((model)=>model.get('id') === carOfTheWeek.get('modelId')),
+    };
+}
+
+export default connect(mapStateToProps)(HomePageContainer);

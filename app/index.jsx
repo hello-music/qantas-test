@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import * as reducers from 'redux/modules';
 import { routerReducer, syncHistoryWithStore } from 'react-router-redux';
-import { hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 const store = createStore(
   combineReducers({ ...reducers, routing: routerReducer }),
@@ -16,7 +16,7 @@ const store = createStore(
   )
 );
 
-const history = syncHistoryWithStore(hashHistory, store);
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,0 +1,8 @@
+.imgBanner img{
+    width: 80%;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+}
