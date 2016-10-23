@@ -8,6 +8,7 @@ const SearchPage = props => (
                             type='make'/>
         <SelectBoxContainer options={props.models.map((model)=>Map({name: model.get('name'), value: model.get('id')}))}
                             type="model"/>
+        <button disabled={props.modelEmpty}>Go</button>
     </div>
 );
 export default SearchPage;
