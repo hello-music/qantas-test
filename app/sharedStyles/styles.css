@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    color: #5F5F5F;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.centeredContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color: #5F5F5F;
+    text-decoration: none;
+    cursor: pointer;
+}
