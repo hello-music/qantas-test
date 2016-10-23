@@ -5,7 +5,8 @@
 
 .imgContainer {
     position: relative;
-    height: 400px;
+    max-height: 500px;
+    min-height: 200px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -15,5 +16,4 @@
 .imgContainer img {
     width: 100%;
     height: auto;
-    position: absolute;
 }
