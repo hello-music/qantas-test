@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import { SearchPage } from 'components';
 import { List } from 'immutable';
 
-const SearchPageContainer = props => (<SearchPage makes={props.makes} models={props.models} modelEmpty={props.modelEmpty}/>);
+const SearchPageContainer = props => (
+    <SearchPage makes={props.makes} models={props.models} modelEmpty={props.modelEmpty} selectedModelId={props.selectedModelId}/>);
+
+//SearchPageContainer.contextTypes = {
+//    router: PropTypes.object.isRequired
+//};
 
 SearchPageContainer.propTypes = {
     // connected props
@@ -21,6 +26,7 @@ function mapStateToProps ({ makes, models, selection }) {
         makes,
         models: models.filter((model)=>model.get('makeId') === selection.get('makeId')),
         modelEmpty: selection.get('modelId') === "",
+        selectedModelId: selection.get('modelId'),
     };
 }
 
