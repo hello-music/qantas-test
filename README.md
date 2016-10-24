@@ -3,7 +3,7 @@
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-[Live demo](https://tquila-test.firebaseapp.com)
+[Live demo](https://qantas-test.firebaseapp.com)
 
 There are three steps developed during the completion of this test:
 
