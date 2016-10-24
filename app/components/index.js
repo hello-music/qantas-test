@@ -4,3 +4,4 @@ export { default as NavBar } from './NavBar/NavBar.jsx';
 export { default as ImageBanner } from './ImageBanner/ImageBanner.jsx';
 export { default as SearchPage } from './SearchPage/SearchPage.jsx';
 export { default as SelectBox } from './SelectBox/SelectBox.jsx';
+export { default as Button } from './Button/Button.jsx';

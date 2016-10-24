@@ -1,5 +1,5 @@
 import React from 'react';
-import { SelectBoxContainer } from 'containers';
+import { SelectBoxContainer,ButtonContainer } from 'containers';
 import { Map } from 'immutable';
 import { Link } from 'react-router';
 
@@ -9,8 +9,7 @@ const SearchPage = props => (
                             type='make'/>
         <SelectBoxContainer options={props.models.map((model)=>Map({name: model.get('name'), value: model.get('id')}))}
                             type="model"/>
-        <button disabled={props.modelEmpty}>Go</button>
-        <Link to={`/make/model/${props.selectedModelId}`} disabled>Create Idea</Link>
+        <ButtonContainer handleClick={props.handleGoButtonClick} disabled={props.modelEmpty} text="Go"/>
     </div>
 );
 export default SearchPage;

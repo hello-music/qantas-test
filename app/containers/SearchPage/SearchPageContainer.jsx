@@ -3,12 +3,25 @@ import { connect } from 'react-redux';
 import { SearchPage } from 'components';
 import { List } from 'immutable';
 
-const SearchPageContainer = props => (
-    <SearchPage makes={props.makes} models={props.models} modelEmpty={props.modelEmpty} selectedModelId={props.selectedModelId}/>);
+class SearchPageContainer extends React.Component {
+    constructor(props){
+        super(props);
+        this.handleGoButtonClick = this.handleGoButtonClick.bind(this);
+    }
+    render () {
+        return (<SearchPage makes={this.props.makes} models={this.props.models} modelEmpty={this.props.modelEmpty}
+                            selectedModelId={this.props.selectedModelId} handleGoButtonClick={this.handleGoButtonClick}/>
+        );
+    }
 
-//SearchPageContainer.contextTypes = {
-//    router: PropTypes.object.isRequired
-//};
+    handleGoButtonClick () {
+        this.context.router.push(`/make/model/${this.props.selectedModelId}`);
+    }
+}
+
+SearchPageContainer.contextTypes = {
+    router: PropTypes.object.isRequired
+};
 
 SearchPageContainer.propTypes = {
     // connected props
