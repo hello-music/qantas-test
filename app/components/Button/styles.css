@@ -8,3 +8,8 @@
     composes: fontWeight from 'sharedStyles/styles.css';
     cursor: pointer;
 }
+
+.qantasBtn[disabled]{
+    cursor: not-allowed;
+    opacity: 0.3;
+}
