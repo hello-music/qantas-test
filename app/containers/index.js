@@ -5,3 +5,4 @@ export { default as ImageBannerContainer } from './ImageBanner/ImageBannerContai
 export { default as SearchPageContainer } from './SearchPage/SearchPageContainer.jsx';
 export { default as SelectBoxContainer } from './SelectBox/SelectBoxContainer.jsx';
 export { default as ButtonContainer } from './Button/ButtonContainer.jsx';
+export { default as ModelPageContainer } from './ModelPage/ModelPageContainer.jsx';

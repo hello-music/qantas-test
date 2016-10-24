@@ -29,6 +29,7 @@ const base = {
         PATHS.app,
     ],
     output: {
+        publicPath: '/',
         path: PATHS.build,
         filename: 'index_bundle.js',
     },
