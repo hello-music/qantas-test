@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin: 100px auto;
+    width: 80%;
+
 }
 
 .selectGroup select {

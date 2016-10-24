@@ -31,3 +31,7 @@ img {
     /*padding: 5px;*/
     background: grey;
 }
+
+.inputHeight {
+    height: 42px;
+}

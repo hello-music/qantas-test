@@ -1,6 +1,6 @@
-select.qantasSelect {
+.qantasSelect {
     border: 1px solid #ccc;
     font-size: 16px;
-    height: 34px;
-    width: 268px;
+    composes: fullWidth from 'sharedStyles/styles.css';
+    composes: inputHeight from 'sharedStyles/styles.css';
 }

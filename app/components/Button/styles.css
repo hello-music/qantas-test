@@ -1,9 +1,8 @@
-.imgContainer{
-    /*margin: 50px auto;*/
-    /*width: 100%;*/
-    /*background-color: #f1f1f1;*/
-}
-
-.reviewContainer{
-
+.qantasBtn {
+    border: none;
+    composes: fullWidth from 'sharedStyles/styles.css';
+    composes: inputHeight from 'sharedStyles/styles.css';
+    background-color: #e0001b;
+    color: white;
+    font-size: 16px;
 }

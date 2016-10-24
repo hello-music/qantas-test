@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
-import { reviewContainer, imgContainer } from './styles.css';
+import { qantasBtn } from './styles.css';
 
 const Button = props => (
-    <button onClick={props.handleClick} disabled={props.disabled}>
+    <button className={qantasBtn} onClick={props.handleClick} disabled={props.disabled}>
         {props.text}
     </button>
 );
