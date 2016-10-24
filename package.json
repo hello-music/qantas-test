@@ -14,8 +14,8 @@
     "url": "git+https://github.com/kan-gogngzhi/qantas-test.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Gongzhi Kan",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kan-gogngzhi/qantas-test/issues"
   },

@@ -1,6 +1,6 @@
-import { mockServer, MockList } from 'graphql-tools';
+import { mockServer } from 'graphql-tools';
 import { formatError } from 'graphql';
-import constants from 'config/constants'
+import constants from 'config/constants';
 
 const { mockCarOfTheWeek, mockMakes, mockModels } = constants;
 
@@ -35,29 +35,29 @@ const shorthand = `
 `;
 
 const server = mockServer(shorthand, {
-    RootQuery: () => ({
-        makes: () => mockMakes,
-        models: () => mockModels,
-        carOfTheWeek: ()=> mockCarOfTheWeek,
-    }),
+  RootQuery: () => ({
+    makes: () => mockMakes,
+    models: () => mockModels,
+    carOfTheWeek: () => mockCarOfTheWeek,
+  }),
 });
 
 function graphQLFetcher (graphQLParams) {
-    let variables = {};
-    try {
-        variables = JSON.parse(graphQLParams.variables);
-    } catch (e) {
+  let variables = {};
+  try {
+    variables = JSON.parse(graphQLParams.variables);
+  } catch (e) {
         // do nothing
-    }
-    return server.query(
+  }
+  return server.query(
         graphQLParams.query,
         variables
     ).then((res) => {
-        console.log(res);
-        if (res.errors) {
-            res.errors = res.errors.map(formatError)
-        }
-        return res;
+      // console.log(res);
+      if (res.errors) {
+        res.errors = res.errors.map(formatError);
+      }
+      return res;
     });
 }
 
@@ -80,17 +80,17 @@ const query = `{
             }`;
 
 const api = {
-    fetchInitData() {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(
+  fetchInitData () {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(
                     graphQLFetcher({
-                        query: query
+                      query: query,
                     })
                 );
-            }, 500);
-        });
-    },
+      }, 500);
+    });
+  },
 };
 
 export default api;
