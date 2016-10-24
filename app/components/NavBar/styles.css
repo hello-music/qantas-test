@@ -2,14 +2,13 @@
     composes: fullWidth from 'sharedStyles/styles.css';
     height: 80px;
     background-color: #e0001b;
+    display: flex;
 }
 .navBar a {
     color: white;
-}
-
-.home {
+    height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 50px;
-    height: 100%;
+    justify-content: center;
+    min-width: 70px;
 }

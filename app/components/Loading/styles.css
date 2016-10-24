@@ -1,7 +1,7 @@
 .loading {
     composes: fullWidth from 'sharedStyles/styles.css';
     height: 100%;
-    background-color: #a0615f;
+    background-color: #e0001b;
     position: absolute;
     display: flex;
     justify-content: center;

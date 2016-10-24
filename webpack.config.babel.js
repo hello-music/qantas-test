@@ -38,6 +38,7 @@ const base = {
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
             { test: /\.jsx$/, exclude: [/node_modules/], loader: 'babel-loader' },
             { test: /\.css$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]' },
+            { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" },
         ],
     },
     resolve: {

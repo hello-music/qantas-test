@@ -4,8 +4,8 @@ import { reviewContainer, imgContainer } from './styles.css';
 
 const HomePage = props => (
     <div>
-        <div className={imgContainer}><ImageBannerContainer url={props.model.get('imageUrl')}/></div>
-        <div className={reviewContainer}>{props.review}</div>
+        <ImageBannerContainer url={props.model.get('imageUrl')}/>
+        <blockquote className={reviewContainer}><q>{props.review}</q></blockquote>
     </div>
 );
 export default HomePage;

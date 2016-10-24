@@ -1,0 +1,15 @@
+.selectGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.selectGroup select {
+    margin-bottom: 20px;
+}
+
+.selectGroup select:focus {
+    outline: 0;
+}
