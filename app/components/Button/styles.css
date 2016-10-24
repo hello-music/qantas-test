@@ -1,8 +1,10 @@
 .qantasBtn {
     border: none;
-    composes: fullWidth from 'sharedStyles/styles.css';
-    composes: inputHeight from 'sharedStyles/styles.css';
     background-color: #e0001b;
     color: white;
     font-size: 16px;
+    composes: fullWidth from 'sharedStyles/styles.css';
+    composes: inputHeight from 'sharedStyles/styles.css';
+    composes: fontWeight from 'sharedStyles/styles.css';
+    cursor: pointer;
 }

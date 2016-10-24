@@ -6,6 +6,7 @@ html, body {
     font-family: sans-serif;
     color: #5F5F5F;
     background-color: #fafafa;
+    font-weight: lighter;
 }
 
 .fullWidth {
@@ -34,4 +35,8 @@ img {
 
 .inputHeight {
     height: 42px;
+}
+
+.fontWeight {
+    font-weight: lighter;
 }

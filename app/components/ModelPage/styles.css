@@ -1,9 +1,11 @@
-.imgContainer{
-    /*margin: 50px auto;*/
-    /*width: 100%;*/
-    /*background-color: #f1f1f1;*/
+.details {
+    display: flex;
+    margin-right: 30px;
+    margin-left: 20px;
 }
 
-.reviewContainer{
-
+.details p {
+    min-width: 150px;
+    display: flex;
+    padding-right: 10px;
 }

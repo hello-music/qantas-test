@@ -1,5 +1,5 @@
 import React from 'react';
-import { SelectBoxContainer,ButtonContainer } from 'containers';
+import { SelectBoxContainer, ButtonContainer } from 'containers';
 import { Map } from 'immutable';
 import { Link } from 'react-router';
 import { selectGroup} from './styles.css';

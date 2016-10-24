@@ -1,15 +1,15 @@
 .loading {
     composes: fullWidth from 'sharedStyles/styles.css';
     height: 100%;
-    background-color: #e0001b;
+    background-color: #fafafa;
     position: absolute;
     display: flex;
     justify-content: center;
 }
 
 .spinner {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #5f9ea0;
+    border: 16px solid #fbe2e5;
+    border-top: 16px solid #e0001b;
     border-radius: 50%;
     width: 120px;
     height: 120px;

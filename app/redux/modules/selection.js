@@ -2,6 +2,7 @@ import { fromJS } from 'immutable';
 
 const SELECT_MAKE = 'SELECT_MAKE';
 const SELECT_MODEL = 'SELECT_MODEL';
+const CLEAR_SELECTION = 'CLEAR_SELECTION';
 
 export function selectMake (makeId) {
     return {
@@ -14,6 +15,11 @@ export function selectModel (modelId) {
     return {
         type: SELECT_MODEL,
         modelId,
+    };
+}
+export function clearSelection () {
+    return {
+        type: CLEAR_SELECTION,
     };
 }
 
@@ -32,6 +38,11 @@ export default function selection (state = initialState, action) {
         case SELECT_MODEL:
             return state.merge({
                 modelId: action.modelId,
+            });
+        case CLEAR_SELECTION:
+            return state.merge({
+                makeId: '',
+                modelId: ''
             });
         default :
             return state;
