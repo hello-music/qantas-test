@@ -46,7 +46,6 @@ There are three steps developed during the completion of this test:
 
 ### Plugins
 - Babel
-- Humps - **camelise json responses**
 - Immutable - **make states immutable and having performance benefits**
 - Redux-thunk - **function blocks of actions**
 - React-router-redux - **add url to redux store**
