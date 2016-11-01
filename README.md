@@ -83,6 +83,7 @@ Go to browser: localhost:3000
  - Plugin Relay
  - Add tests
  - UI/UX improvements
+ - sri integrity
 
 License
 ----
