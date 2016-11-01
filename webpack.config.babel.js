@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event;
 
@@ -24,6 +25,9 @@ const productionPlugin = new webpack.DefinePlugin({
     },
 });
 
+const uglifyPlugin = new webpack.optimize.UglifyJsPlugin();
+const cleanPlugin = new CleanWebpackPlugin(['dist']);
+
 const base = {
     entry: [
         PATHS.app,
@@ -31,7 +35,7 @@ const base = {
     output: {
         publicPath: '/',
         path: PATHS.build,
-        filename: 'index_bundle.js',
+        filename: 'index-bundle-[hash].js',
     },
     module: {
         loaders: [
@@ -48,6 +52,7 @@ const base = {
 };
 
 const developmentConfig = {
+    devtool: 'eval',
     devServer: {
         contentBase: PATHS.build,
         hot: true,
@@ -59,7 +64,8 @@ const developmentConfig = {
 };
 
 const productionConfig = {
-    plugins: [HTMLWebpackPluginConfig, productionPlugin],
+    devtool: 'source-map',
+    plugins: [HTMLWebpackPluginConfig, productionPlugin, uglifyPlugin, cleanPlugin],
 };
 
 export default Object.assign(
